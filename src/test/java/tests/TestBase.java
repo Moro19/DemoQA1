@@ -23,8 +23,8 @@ public class TestBase {
         //Configuration.browserSize = "1366x768";
         Configuration.browser = "chrome";
         Configuration.browserVersion = "100.0";
-        Configuration.holdBrowserOpen = true;
-        Configuration.remote = "https://Moro19:Inferno19Amaru@jenkins.autotests.cloud/wd/hub";
+       // Configuration.holdBrowserOpen = true;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.util.Map;
 
 public class TestBase {
@@ -22,8 +23,8 @@ public class TestBase {
         //Configuration.browserSize = "1366x768";
         Configuration.browser = "chrome";
         Configuration.browserVersion = "100.0";
-       // Configuration.holdBrowserOpen = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.holdBrowserOpen = true;
+        Configuration.remote = "https://Moro19:Inferno19Amaru@jenkins.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -36,17 +37,16 @@ public class TestBase {
 
     @BeforeEach
     void addListener() {
-
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
-    /*   @AfterEach
+    @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-    }*/
+    }
 
 }
 

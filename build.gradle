@@ -32,11 +32,7 @@ dependencies {
             "com.github.javafaker:javafaker:1.0.2"
     )
 }
-task simple_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("simple")
-    }
-}
+
 
 task remote_test(type: Test) {
     useJUnitPlatform {

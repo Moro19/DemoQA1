@@ -8,7 +8,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import java.util.Map;
 
 public class TestBase {
@@ -37,16 +36,17 @@ public class TestBase {
 
     @BeforeEach
     void addListener() {
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
-    @AfterEach
+    /*   @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-    }
+    }*/
 
 }
 
